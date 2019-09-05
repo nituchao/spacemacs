@@ -1,0 +1,7 @@
+(defun a-test-save-hook()
+  "Test of save hook"
+  (when (eq major-mode 'markdown-mode)
+    (message "banana")
+    (markdown-preview)))
+
+(add-hook 'after-save-hook 'a-test-save-hook)
